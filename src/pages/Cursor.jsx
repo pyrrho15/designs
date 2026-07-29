@@ -20,7 +20,7 @@ const designs = [
     // { component: Card, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Card.jsx },
     { component: Radar, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Radar.jsx' },
     { component: Cube, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Cube.jsx' },
-    {component:FileCompo, githubUrl:null},
+    { component: FileCompo, githubUrl: "https://github.com/DarkkkSoul/designs/blob/main/src/components/FileCompo.jsx" },
     { component: Empty, githubUrl: null },
     { component: Empty, githubUrl: null },
 ]
