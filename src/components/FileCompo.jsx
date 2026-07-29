@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useReducer, useRef, useState } from 'react'
 
-function FileCompo() {
+function FileCompo({githubUrl}) {
 
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [newFileName, setNewFileName] = useState("")
@@ -145,7 +145,18 @@ function FileCompo() {
   })
 
   return (
-    <div className='col-span-2 row-span-2 items-center justify-center flex h-full w-full'>
+    <div className='relative col-span-2 row-span-2 items-center justify-center flex h-full w-full'>
+
+      {githubUrl && (
+                <a
+                    href={githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute top-3 right-3 z-10 text-white/60 hover:text-white transition-colors"
+                >
+                    <img src="/code.png" className="size-5" />
+                </a>
+            )}
 
       <div className="flex flex-col font-sans w-sm space-y-4 px-3 border pt-4 rounded-lg bg-[#F5F5F5] relative">
 
@@ -159,7 +170,6 @@ function FileCompo() {
           <div className="tracking-tight max-w-51 space-y-2">
             <h3 className="text text-2xl text-[#065f46] font-serif">Design Roadmap</h3>
             <p className="text-xs text text-[#282828]/70 tracking-normal wrap-break-word">Last updated 3 days ago</p>
-            {/* <div className='text-xs text text-[#065f46] w-fit border border-[#065f46]/50 rounded-sm bg-[#065f46]/22 px-2 py-0.5'>pdf</div> */}
           </div>
         </div>
 
