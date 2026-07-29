@@ -7,6 +7,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 /* BUTTON BORDER GRADIENT */
 .btn-grad {
   --angle: 0deg;
@@ -28,12 +29,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: conic-gradient(
-    from var(--angle),
-    #7c3aed,
-    #bef264,
-    #7c3aed
-  );
+  background: conic-gradient(from var(--angle),
+      #7c3aed,
+      #bef264,
+      #7c3aed);
 
   filter: blur(20px);
   opacity: 0.5;
@@ -46,6 +45,50 @@
 
 
 /* TRAIL */
-.cursorRef {    
+.cursorRef {
   @apply size-7 bg-white rounded-full absolute top-21 left-132.5 pointer-events-none z-10;
+}
+
+.action-btn {
+  @apply relative bg-linear-to-t from-[#065f46] to-[#065f46]/85 p-3 rounded-full cursor-pointer transition-colors;
+}
+
+.action-btn::before {
+  position: absolute;
+  content: '';
+  inset: 0.8px;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 4px 0.5px rgba(241, 235, 235, 0.6);
+}
+
+.action-btn:hover::before {
+  position: absolute;
+  content: '';
+  inset: 0.8px;
+  border-radius: 100%;
+  border: 1.25px solid rgba(241, 235, 235, 0.8);
+  box-shadow: inset 0px 0px 4px 0.6px rgba(241, 235, 235, 0.6);
+}
+.sub-buttons{
+  @apply flex items-center justify-center text-white;
+}
+.sub-buttons::before {
+  position: absolute;
+  content: '';
+  inset: 0.8px;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 4px 0.5px rgba(241, 235, 235, 0.6);
+}
+
+.sub-buttons:hover::before {
+  position: absolute;
+  content: '';
+  inset: 0.8px;
+  border-radius: 100%;
+  border: 1.25px solid rgba(241, 235, 235, 0.8);
+  box-shadow: inset 0px 0px 4px 0.6px rgba(241, 235, 235, 0.6);
+}
+
+.file-compo {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
