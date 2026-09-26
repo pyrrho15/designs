@@ -9,6 +9,7 @@ import FolderIcon from '../components/FolderIcon'
 import Radar from '../components/Radar'
 import Stack from '../components/Stack'
 import FileCompo from '../components/FileCompo'
+import Expense from '../components/Expense'
 
 const designs = [
     { component: Simple, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Simple.jsx' },
@@ -21,6 +22,7 @@ const designs = [
     { component: Radar, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Radar.jsx' },
     { component: Cube, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Cube.jsx' },
     { component: FileCompo, githubUrl: "https://github.com/DarkkkSoul/designs/blob/main/src/components/FileCompo.jsx" },
+    { component: Expense, githubUrl: "https://github.com/DarkkkSoul/designs/blob/main/src/components/Expense.jsx" },
     { component: Empty, githubUrl: null },
     { component: Empty, githubUrl: null },
 ]
