@@ -1,63 +1,43 @@
-import gsap from 'gsap'
-import { Link } from 'react-router'
-import { useGSAP } from '@gsap/react'
+import Dropdown from '../components/Dropdown'
+import Empty from '../components/Empty'
+import Simple from '../components/Simple'
+import Talking from '../components/Talking'
+import Trail from '../components/Trail'
+import Card from '../components/Card'
+import Cube from '../components/Cube'
+import FolderIcon from '../components/FolderIcon'
+import Radar from '../components/Radar'
+import Stack from '../components/Stack'
+import FileCompo from '../components/FileCompo'
+import Expense from '../components/Expense'
+
+const designs = [
+    { component: Simple, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Simple.jsx' },
+    { component: Trail, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Trail.jsx' },
+    { component: Talking, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Talking.jsx' },
+    { component: Dropdown, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Dropdown.jsx' },
+    { component: FolderIcon, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/FolderIcon.jsx' },
+    { component: Stack, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Stack.jsx' },
+    // { component: Card, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Card.jsx' },
+    { component: Radar, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Radar.jsx' },
+    { component: Cube, githubUrl: 'https://github.com/DarkkkSoul/designs/blob/main/src/components/Cube.jsx' },
+    { component: FileCompo, githubUrl: "https://github.com/DarkkkSoul/designs/blob/main/src/components/FileCompo.jsx" },
+    { component: Expense, githubUrl: "https://github.com/DarkkkSoul/designs/blob/main/src/components/Expense.jsx" },
+    { component: Empty, githubUrl: null },
+    { component: Empty, githubUrl: null },
+]
 
 function Home() {
-  gsap.registerPlugin(useGSAP)
-  useGSAP(() => {
-    gsap.to(".btn-grad", {
-      "--angle": "360deg",
-      repeat: -1,
-      duration: 2,
-      ease: "linear"
-    })
-  })
-
-  return (
-    <div className='flex items-center justify-center min-h-screen w-full flex-wrap bg-[#282828] text-gray-300 text-sm font-sans tracking-wide'>
-
-      {/* <div className='absolute size-30 bg-white/80 rounded-full blur-3xl' /> */}
-
-      <div className='flex gap-3 max-w-xl flex-wrap items-center justify-center'>
-        <button className='btn-grad'>
-          <span className='span-grad'>
-            <Link to="/image-slider">Image Slider</Link>
-          </span>
-        </button>
-
-        <button className='btn-grad'>
-          <span className='span-grad'>
-            <Link to="/apple-designs">Apple Designs</Link>
-          </span>
-        </button>
-
-        <button className='btn-grad'>
-          <span className='span-grad'>
-            <Link to="/svg">SVG</Link>
-          </span>
-        </button>
-
-        <button className='btn-grad'>
-          <span className='span-grad'>
-            <Link to="/antigravity">Antigravity</Link>
-          </span>
-        </button>
-
-        <button className='btn-grad'>
-          <span className='span-grad'>
-            <Link to="/playground">Playground</Link>
-          </span>
-        </button>
-
-        <button className='btn-grad'>
-          <span className='span-grad'>
-            <Link to="/cursor">Cursor</Link>
-          </span>
-        </button>
-      </div>
-
-    </div>
-  )
+    return (
+        <div className='bg-[#1c1b1b] pb-[150px]'>
+            <h2 className='border-b border-white/60 text-white/90 font-serif uppercase text-3xl py-6 text-center'>my Designs</h2>
+            <div className='min-h-screen grid grid-cols-1 sm:grid-cols-6 grid-rows-[repeat(30,10rem)] divide-x divide-y divide-white/60'>
+                {designs.map(({ component: Component, githubUrl }, i) => (
+                    <Component key={i} githubUrl={githubUrl} />
+                ))}
+            </div>
+        </div>
+    )
 }
 
 export default Home
