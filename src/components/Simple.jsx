@@ -41,7 +41,7 @@ function Simple({ githubUrl }) {
             <h2 className='text-2xl text-white/80 text-center uppercase font-serif'>Simple Cursor <br />Animation</h2>
             <div
                 ref={cursorRef}
-                className='size-7 bg-white rounded-full absolute top-0 left-0 pointer-events-none z-10 mix-blend-difference' />
+                className='size-7 bg-white rounded-full absolute top-0 left-0 pointer-events-none z-50' />
         </div>
     )
 }

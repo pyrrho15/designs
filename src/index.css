@@ -46,7 +46,7 @@
 
 /* TRAIL */
 .cursorRef {
-  @apply size-7 bg-white rounded-full absolute top-21 left-132.5 pointer-events-none z-10;
+  @apply size-7 bg-white rounded-full absolute top-0 left-0 pointer-events-none z-10;
 }
 
 .action-btn {

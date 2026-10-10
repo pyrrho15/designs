@@ -48,13 +48,15 @@ function Dropdown({ githubUrl }) {
                 duration: 1,
                 ease: "elastic.out",
                 marginTop: 0,
-                opacity: 0
+                opacity: 0,
+                overwrite: "auto"
             })
 
             gsap.to(`#arr${prevId}`, {
                 rotate: 0,
                 duration: 0.5,
-                ease: "elastic.out"
+                ease: "elastic.out",
+                overwrite: "auto"
             })
         }
 
@@ -63,13 +65,15 @@ function Dropdown({ githubUrl }) {
             opacity: isClosing ? 0 : 1,
             duration: 1,
             ease: "elastic.out",
-            marginTop: isClosing ? 0 : 10
+            marginTop: isClosing ? 0 : 10,
+            overwrite: "auto"
         })
 
         gsap.to(`#arr${id}`, {
             rotate: isClosing ? 0 : 180,
             duration: 0.5,
-            ease: "elastic.out"
+            ease: "elastic.out",
+            overwrite: "auto"
         })
     }
 

@@ -29,7 +29,7 @@ const designs = [
 
 function Home() {
     return (
-        <div className='bg-[#1c1b1b] pb-[150px]'>
+        <div className='bg-neutral-500/90 pb-0'>
             <h2 className='border-b border-white/60 text-white/90 font-serif uppercase text-3xl py-6 text-center'>Playground</h2>
             <div className='min-h-screen grid grid-cols-1 sm:grid-cols-6 grid-rows-[repeat(30,10rem)] divide-x divide-y divide-white/60'>
                 {designs.map(({ component: Component, githubUrl }, i) => (

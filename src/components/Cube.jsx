@@ -13,7 +13,7 @@ function Cube({ githubUrl }) {
 
 
     return (
-        <div className='flex items-center perspective-[1000px] relative justify-center row-span-3 col-span-2 bg-[#282828]'>
+        <div className='flex items-center perspective-[1000px] relative justify-center row-span-3 col-span-2 '>
             {githubUrl && (
                 <a
                     href={githubUrl}
